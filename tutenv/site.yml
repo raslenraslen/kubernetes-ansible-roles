@@ -2,6 +2,6 @@
 - name: Deploy Kubernetes Cluster
   hosts: all
   become: true
-  gather_facts: true  # On a besoin des facts pour l'adresse IP du master
+  gather_facts: true  
   roles:
     - kubernetes_cluster

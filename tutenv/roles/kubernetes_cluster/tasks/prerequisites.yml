@@ -121,6 +121,14 @@
     regexp: SystemdCgroup = false
     replace: SystemdCgroup = true
 
+# --- NOUVELLE TÂCHE AJOUTÉE POUR REDÉMARRER CONTAINERD ---
+- name: Restart containerd to apply new configuration
+  ansible.builtin.systemd:
+    name: containerd
+    state: restarted
+    daemon_reload: true
+# -----------------------------------------------------------
+
 - name: 10. Enable Ipv4 Bridging
   ansible.builtin.replace:
     path: /etc/sysctl.conf
@@ -228,4 +236,3 @@
   with_items: '{{ kube_packages }}'
   tags:
     - install_kube_packages
-
