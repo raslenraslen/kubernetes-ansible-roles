@@ -55,7 +55,7 @@ workerker1 ansible_host=VOTRE_IP_WORKER1 ansible_user=VOTRE_USER_WORKER
 # 3. Exécuter le Playbook
 
 ```
-ansible-playbook -i inventory.ini site.yml -k -K
+ansible-playbook -i inventory.ini site.yml 
 ```
 
 Le playbook va :
