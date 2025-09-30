@@ -21,7 +21,7 @@ workerker2 ansible_host=NOUVELLE_IP_DU_WORKER2 ansible_user=raslenworker # <-- A
 **Exécute ton playbook site.yml en ciblant uniquement le nouveau worker :**
 
 ````
-ansible-playbook -i inventory.ini site.yml -k -K -l workerker2
+ansible-playbook -i inventory.ini site.yml  -l workerker2
 ````
 
 
@@ -72,5 +72,5 @@ workerker4 ansible_host=192.168.216.145 ansible_user=raslenworker
 Exécute ton playbook en ciblant ce nouveau groupe :
 
 ````
-ansible-playbook -i inventory.ini site.yml -k -K -l new_workers
+ansible-playbook -i inventory.ini site.yml  -l new_workers
 ````
