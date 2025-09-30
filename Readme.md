@@ -1,5 +1,7 @@
 # Kubernetes Cluster Deployment with Ansible Roles
 
+![alt text](Screenshots/capture.jpg)
+
 Ce dépôt contient un playbook Ansible pour déployer un cluster Kubernetes (v1.28) avec un nœud master et des nœuds workers sur des machines Ubuntu. Le playbook est structuré en rôles pour une meilleure organisation et maintenabilité.
 
 ## Prérequis
