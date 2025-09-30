@@ -30,7 +30,7 @@ Suivez ces étapes pour déployer votre cluster Kubernetes :
 ### 1. Cloner le Dépôt
 
 ```bash
-git clone https://github.com/votre_utilisateur/votre_repo.git
+git clone https://github.com/raslenraslen/kubernetes-ansible-roles
 cd votre_repo
 
 ```
