@@ -58,7 +58,7 @@
 
 - name: Copy Connection String To A Remote File
   ansible.builtin.template:
-    src: k8s_worker_node_connection.j2 # Ansible trouvera ce template dans roles/kubernetes_cluster/templates/
+    src: k8s_worker_node_connection.j2 
     dest: worker_conn_string
     mode: '0755'
 
