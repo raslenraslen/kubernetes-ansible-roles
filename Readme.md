@@ -66,3 +66,6 @@ Le playbook va :
 -Initialiser le nœud master (controller1).  
 -Récupérer la chaîne de jointure du cluster.  
 -Joindre les nœuds workers au cluster.  
+
+
+![alt text](Screenshots/nodes.PNG)
