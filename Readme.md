@@ -18,28 +18,7 @@ Avant de lancer le playbook, assurez-vous d'avoir les éléments suivants :
     *   Clé SSH privée (`~/.ssh/id_rsa`) sur votre machine de contrôle, accessible par Ansible pour se connecter aux nœuds cibles.
     *   Le répertoire `Remote_Files` à la racine de ce projet.
 
-## Structure du Dépôt
 
-.
-├── inventory.ini # Fichier d'inventaire Ansible
-├── site.yml # Playbook principal qui orchestre le déploiement
-├── Remote_Files/ # Répertoire pour les fichiers temporaires (ex: chaîne de jointure worker)
-│ └── worker_conn_string # (Généré par le master, fetché localement)
-└── roles/
-└── kubernetes_cluster/ # Rôle Ansible unique pour le déploiement Kubernetes
-├── defaults/ # Variables par défaut du rôle
-│ └── main.yml
-├── handlers/ # Gestionnaires d'événements (ex: redémarrage de service)
-│ └── main.yml
-├── tasks/ # Tâches du rôle, divisées par fonction
-│ ├── main.yml # Aiguille les tâches spécifiques (prereq, master, worker)
-│ ├── master.yml # Tâches spécifiques au nœud Master
-│ ├── prerequisites.yml # Tâches de prérequis pour tous les nœuds
-│ └── worker.yml # Tâches spécifiques aux nœuds Workers
-├── templates/ # Fichiers de modèles Jinja2
-│ └── k8s_worker_node_connection.j2 # Template pour la chaîne de jointure worker
-└── vars/ # Variables du rôle
-└── main.yml
 
 
 ## Étapes de Déploiement
