@@ -43,7 +43,7 @@ worker.yml s'exécutera sur workerker2 car il est dans le groupe workers (when: 
 # Si tu ajoutes workerker2, workerker3, workerker4 à ton inventory.ini, tu peux les spécifier avec des virgules :
 
 ````
-ansible-playbook -i inventory.ini site.yml -k -K -l workerker2,workerker3,workerker4
+ansible-playbook -i inventory.ini site.yml  -l workerker2,workerker3,workerker4
 ````
 
 
